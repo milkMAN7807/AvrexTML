@@ -25,7 +25,7 @@ The library ingests ONNX models in a specific format. NOTE THIS LIBRARY ONLY ING
 
 # Supported C++ Compilers
 - AVR-GCC for on board deployment (other compilers not supported due to likely different flash memory access configs)
-- Any compiler if you would to build locally! I personally used Cl
+- Any compiler if you want to build locally! I personally used Cl
 
 # Benchmarks
 All these benchmarks were run on the Atmega328p Arduino UNO R3.
