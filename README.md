@@ -23,9 +23,13 @@ The library ingests ONNX models in a specific format. NOTE THIS LIBRARY ONLY ING
 - Softmax
 - Relu
 
+# Supported C++ Compilers
+- AVR-GCC for on board deployment (other compilers not supported due to likely different flash memory access configs)
+- Any compiler if you would to build locally! I personally used Cl
+
 # Benchmarks
 All these benchmarks were run on the Atmega328p Arduino UNO R3.
-Compiler build flags:
+AVR-GCC build flags:
 ```
 build_flags =
     -std=gnu++17
