@@ -43,12 +43,12 @@ build_flags =
     -mmcu=atmega328p
 ```
 - Large model on MNIST digit dataset
-  - 196->196->relu->10->softmax (40,582 paramters)
+  - 196->196->relu->10->softmax (40,582 parameters)
   - On device model accuracy: 97.14%
   - Average inference time: 49.33ms
   - ONNX model run on PC accuracy: 97.14%
 - Small model on MNIST digit dataset
-  - 196-20-relu-10-softmax
+  - 196-20-relu-10-softmax (4,150 parameters)
   - On device model accuracy: 93.05%
   - Average inference time: 6.72ms
   - ONNX model run on PC accuracy: 93.05%
