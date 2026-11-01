@@ -14,11 +14,30 @@ The library ingests ONNX models in a specific format. NOTE THIS LIBRARY ONLY ING
 - The graph topology must be sequential (The compiler will throw a fit)
   - As of right now only MLPs are supported, so standard dense networks
 - Please check the demo model maker script if you are unsure about anything
-- Once you have your model header file ready, include it, feed it an int16 buffer with your data and run MyHeaderTitle::network.forward(myInt16Buffer, numberOfElements)
+- Once you have your model header file ready, include it, feed it an int16 buffer with your data and run ``MyHeaderTitle::network.forward(myInt16Buffer, numberOfElements)``
 - Simply read whats in your buffer and voila!
 
+# Supported Activation Functions
+- Sigmoid
+- Tanh
+- Softmax
+- Relu
+
 # Benchmarks
-All these benchmarks were run on the Atmega328p Arduino UNO R3
+All these benchmarks were run on the Atmega328p Arduino UNO R3.
+Compiler build flags:
+```
+build_flags =
+    -std=gnu++17
+    -fno-exceptions
+    -fno-rtti
+    -Wall
+    -Ilib
+    -O2
+    -flto
+    -Wl,--relax
+    -mmcu=atmega328p
+```
 - Large model on MNIST digit dataset
   - 196->196->relu->10->softmax (40,582 paramters)
   - On device model accuracy: 97.14%
