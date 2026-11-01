@@ -8,6 +8,7 @@ Please note this library is in very early development so there are plenty of bug
 
 # How to use
 The library ingests ONNX models in a specific format. NOTE THIS LIBRARY ONLY INGESTS PRE-QUANTIZED MODELS!!!
+- run compiler.py
 - all weights must be included in the onnx file
 - all weights must be fp32 and all weight matrices must be ternarized
 - Alpha for each dense layer must be inside the weight matrix
@@ -16,6 +17,7 @@ The library ingests ONNX models in a specific format. NOTE THIS LIBRARY ONLY ING
 - Please check the demo model maker script if you are unsure about anything
 - Once you have your model header file ready, include it, feed it an int16 buffer with your data and run ``MyHeaderTitle::network.forward(myInt16Buffer, numberOfElements)``
 - Simply read whats in your buffer and voila!
+- if you for some reason want to change the LUTS there is a lut_error.py script you can run to see accuracy changes
 
 # Supported Activation Functions
 - Sigmoid
